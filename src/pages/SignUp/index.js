@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { View, Text, KeyboardAvoidingView, TouchableOpacity, Platform, TextInput } from 'react-native';
 import { useNavigation } from "@react-navigation/native";
 import axios from "axios";
-
 import styles from "./styles.js";
 
 export default function SignUp() {

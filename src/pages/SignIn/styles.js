@@ -1,9 +1,5 @@
 import { StyleSheet, Animated } from "react-native";
 
-
-
-
-
 const styles = StyleSheet.create({
     Corpo: {
         flex: 1,

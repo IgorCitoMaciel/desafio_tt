@@ -3,7 +3,6 @@ import { StyleSheet, Dimensions } from "react-native";
 const larguraTela = Dimensions.get('window').width;
 const alturaTela = Dimensions.get('window').height;
 
-
 const styles = StyleSheet.create({
     Container: {
         flex: 1,

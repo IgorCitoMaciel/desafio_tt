@@ -9,13 +9,11 @@ import {
     Animated,
     Keyboard,
 } from "react-native";
-
 import styles from "./styles.js";
 import axios from "axios";
 import { useNavigation } from "@react-navigation/native";
 import AsyncStorage from "@react-native-community/async-storage";
 import { AuthContext } from '../../contexts/auth';
-
 console.disableYellowBox = true
 
 export default function SignIn() {
@@ -24,11 +22,7 @@ export default function SignIn() {
     const [logo] = useState(new Animated.ValueXY({ x: 160, y: 250 }));
     const [user, setUser] = useState("");
     const navigation = useNavigation();
-
     const { login } = useContext(AuthContext);
-
-
-
 
     useEffect(() => {
         KeyboardDidShowListener = Keyboard.addListener('keyboardDidShow', keyboardDidShow);
@@ -66,7 +60,6 @@ export default function SignIn() {
         login(email, senha);
 
     }
-
 
     return (
         <View style={styles.Corpo}>
@@ -122,7 +115,6 @@ export default function SignIn() {
                 <TouchableOpacity onPress={() => navigation.navigate("Esqueci minha senha")}>
                     <Text style={styles.TextoEsqueci}>Esqueci minha senha</Text>
                 </TouchableOpacity>
-
 
             </KeyboardAvoidingView>
         </View>

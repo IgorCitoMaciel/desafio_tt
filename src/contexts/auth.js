@@ -10,10 +10,6 @@ function AuthProvider({ children }) {
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true);
 
-    // const [email, setEmail] = useState("");
-    // const [senha, setSenha] = useState("");
-    //const navigation = useNavigation();
-
     useEffect(() => {
         async function loadStorage() {
             const storageUser = await AsyncStorage.getItem('Auth_user');
@@ -70,7 +66,6 @@ function AuthProvider({ children }) {
             </View>
         );
     }
-
 
     return (
         <AuthContext.Provider value={{ signed: !!user, login, signOut, user, loading }}>

@@ -2,9 +2,6 @@ import React, { useState } from 'react';
 import { View, Text, KeyboardAvoidingView, TouchableOpacity, Platform, TextInput } from 'react-native';
 import { useNavigation } from "@react-navigation/native";
 import axios from "axios";
-
-
-
 import styles from "./styles.js";
 
 export default function ResetSenha() {
@@ -12,7 +9,6 @@ export default function ResetSenha() {
     const [senha, setSenha] = useState("");
     const [token, setToken] = useState("");
     const navigation = useNavigation();
-
 
     function envioEmail() {
         axios.post('https://cd084716ac05.ngrok.io/sessions/reset_password', {
@@ -31,10 +27,7 @@ export default function ResetSenha() {
                 //console.log(error);
                 alert('Verifique se os campos se estão corretos!');
             });
-
-
     }
-
 
     return (
         <View style={styles.Corpo}>
@@ -43,7 +36,6 @@ export default function ResetSenha() {
                 behavior={Platform.OS === 'ios' ? 'padding' : ''}
                 enabled
             >
-
                 <View style={styles.CampoTexto}>
                     <TextInput
                         style={styles.AreaTexto}
@@ -80,13 +72,9 @@ export default function ResetSenha() {
                     />
                 </View>
 
-
-
                 <TouchableOpacity onPress={() => envioEmail()} style={styles.Botao} >
                     <Text style={styles.TextoBotao}>Confirmar</Text>
                 </TouchableOpacity>
-
-
 
             </KeyboardAvoidingView>
         </View>

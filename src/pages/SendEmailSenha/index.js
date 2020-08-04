@@ -2,15 +2,11 @@ import React, { useState } from 'react';
 import { View, Text, KeyboardAvoidingView, TouchableOpacity, Platform, TextInput } from 'react-native';
 import { useNavigation } from "@react-navigation/native";
 import axios from "axios";
-
-
-
 import styles from "./styles.js";
 
 export default function SendEmailSenha() {
     const [email, setEmail] = useState('');
     const navigation = useNavigation();
-
 
     function envioEmail() {
         axios.post('https://cd084716ac05.ngrok.io/sessions/forgot_password', {
@@ -27,10 +23,7 @@ export default function SendEmailSenha() {
                 //console.log(error);
                 alert('Verifique se os campo do email está correto!');
             });
-
-
     }
-
 
     return (
         <View style={styles.Corpo}>
@@ -52,13 +45,9 @@ export default function SendEmailSenha() {
                     />
                 </View>
 
-
-
                 <TouchableOpacity onPress={() => envioEmail()} style={styles.Botao} >
                     <Text style={styles.TextoBotao}>Enviar email</Text>
                 </TouchableOpacity>
-
-
 
             </KeyboardAvoidingView>
         </View>

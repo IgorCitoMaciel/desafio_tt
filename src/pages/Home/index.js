@@ -2,9 +2,7 @@ import React, { useContext } from 'react';
 import { View, Text, TouchableOpacity } from 'react-native';
 import styles from '../Home/styles';
 import { useNavigation } from "@react-navigation/native";
-import AsyncStorage from "@react-native-community/async-storage";
 import { AuthContext } from '../../contexts/auth';
-
 
 export default function Home() {
     const navigation = useNavigation();
